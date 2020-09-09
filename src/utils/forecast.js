@@ -11,7 +11,7 @@ const forecast = (lattitude, longditude, callback) => {
         } else if (body.error) {
             callback('Could not find co-ordinates. Please try again with a different search term', undefined)
         } else {
-            callback(undefined, body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + " degrees, it feels more like " + body.current.feelslike + ' degress out')
+            callback(undefined, body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + " degrees, it feels more like " + body.current.feelslike + ' degress out. The humidity is ' + body.current.humidity + '%')
         }
     })
 
